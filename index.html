@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lunática — IA de entretenimiento</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Lunática: IA de entretenimiento con humor absurdo, juegos y retos diarios.">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <div class="logo">🌙</div>
+      <div>
+        <h1>Lunática</h1>
+        <p>IA de entretenimiento con actitud.</p>
+      </div>
+    </div>
+    <nav class="tabs">
+      <button class="tab active" data-target="chat">Chat</button>
+      <button class="tab" data-target="juegos">Juegos</button>
+      <button class="tab" data-target="reto">Reto del día</button>
+      <button class="tab" data-target="frase">Frase</button>
+      <button class="tab" data-target="premium">Premium</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Chat -->
+    <section id="chat" class="panel active">
+      <div id="chatWindow" class="chat-window"></div>
+      <form id="chatForm" class="chat-form">
+        <input id="chatInput" type="text" placeholder="Pregúntame lo que quieras..." autocomplete="off" />
+        <button type="submit">Enviar</button>
+      </form>
+      <div class="share-row">
+        <button id="shareLast" class="share">Compartir respuesta</button>
+      </div>
+    </section>
+
+    <!-- Juegos -->
+    <section id="juegos" class="panel">
+      <div class="card">
+        <h3>Trivia loca</h3>
+        <p>Responde lo primero que se te ocurra. No hay reglas, solo caos.</p>
+        <button id="playTrivia">Jugar</button>
+        <div id="triviaOut" class="out"></div>
+      </div>
+      <div class="card">
+        <h3>Adivina el absurdo</h3>
+        <p>Te doy pistas delirantes y adivinas el “qué”.</p>
+        <button id="playAdivina">Jugar</button>
+        <div id="adivinaOut" class="out"></div>
+      </div>
+    </section>
+
+    <!-- Reto del día -->
+    <section id="reto" class="panel">
+      <div class="card">
+        <h3>Tu reto de hoy</h3>
+        <p id="retoText"></p>
+        <div class="share-row">
+          <button id="shareReto" class="share">Compartir reto</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Frase -->
+    <section id="frase" class="panel">
+      <div class="card">
+        <h3>Frase del día</h3>
+        <blockquote id="fraseText"></blockquote>
+        <div class="share-row">
+          <button id="shareFrase" class="share">Compartir frase</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Premium -->
+    <section id="premium" class="panel">
+      <div class="card premium">
+        <h3>Zona premium</h3>
+        <p>Desbloquea historias interactivas y predicciones extra absurdas.</p>
+        <div id="premiumLocked">
+          <input id="premiumCode" type="password" placeholder="Código de acceso" />
+          <button id="unlockPremium">Desbloquear</button>
+          <small>Tip: usa un código de prueba para la demo: LUNA-TEST</small>
+        </div>
+        <div id="premiumContent" class="hidden">
+          <h4>Historia interactiva</h4>
+          <p id="historia"></p>
+          <button id="historiaNext">Siguiente</button>
+          <hr />
+          <h4>Predicción extra</h4>
+          <p id="prediccionPro"></p>
+          <button id="newPrediccionPro">Otra</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Hecho para reír. No es consejo serio. © Lunática</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+/* ——— Fuentes y básicos ——— */
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #faf7f2;
+  color: #27212e;
+  margin: 0;
+  padding: 0;
+}
+h1, h3, h4 {
+  font-family: 'Bangers', cursive;
+  margin-top: 0;
+}
+header.header {
+  background: #f8e7ff;
+  padding: 1.5rem 0.5rem;
+  border-bottom: 2px solid #e6d1e6;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logo {
+  font-size: 2.5rem;
+}
+.tabs {
+  margin-top: 1rem;
+}
+.tabs .tab {
+  background: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  margin-right: 0.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 25px 25px 0 0;
+  transition: background 0.2s;
+}
+.tabs .tab.active {
+  background: #d1c4e9;
+  color: #21193b;
+  font-weight: bold;
+}
+.panel {
+  display: none;
+  padding: 2rem 1rem;
+}
+.panel.active {
+  display: block;
+}
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px #e5d7f4;
+  padding-bottom: 2rem;
+}
+.card {
+  background: #f4f1fa;
+  padding: 1.2rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 5px #e5d7f4;
+}
+.premium {
+  border: 2px dashed #a58efa;
+}
+.hidden {
+  display: none !important;
+}
+
+/* ——— Chat ——— */
+.chat-window {
+  background: #fff;
+  border-radius: 0.5rem;
+  min-height: 200px;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #e6d1e6;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.msg {
+  display: flex;
+  margin-bottom: 0.7rem;
+}
+.msg.user .bubble {
+  background: #d1c4e9;
+  color: #21193b;
+  align-self: flex-end;
+}
+.msg.bot .bubble {
+  background: #21193b;
+  color: #f8e7ff;
+  align-self: flex-start;
+}
+.bubble {
+  padding: 0.9rem 1rem;
+  border-radius: 1.2rem;
+  max-width: 80%;
+  word-break: break-word;
+  box-shadow: 0 1px 3px #e5d7f4;
+}
+.chat-form {
+  display: flex;
+  gap: 0.5rem;
+}
+.chat-form input[type="text"] {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  border-radius: 1.2rem;
+  border: 1px solid #d1c4e9;
+  font-size: 1rem;
+}
+.chat-form button {
+  background: #a58efa;
+  color: #fff;
+  border: none;
+  border-radius: 1.2rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.chat-form button:hover {
+  background: #8152d4;
+}
+
+/* ——— Compartir y botones ——— */
+.share-row {
+  margin-top: 1rem;
+  text-align: right;
+}
+.share {
+  background: #ffd6be;
+  color: #a35e2e;
+  border: none;
+  border-radius: 1.2rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.share:hover {
+  background: #ffb889;
+}
+
+/* ——— Juegos y salidas ——— */
+.out {
+  margin-top: 1rem;
+  background: #fffbe7;
+  color: #855800;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1rem;
+  min-height: 2.2rem;
+  font-size: 1.1rem;
+}
+
+/* ——— Premium ——— */
+#premiumContent h4 {
+  margin-bottom: 0.5rem;
+}
+
+/* ——— Footer ——— */
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.95rem;
+  color: #8c7baa;
+  background: transparent;
+  margin-top: 2rem;
+}
+
+/* ——— Responsive ——— */
+@media (max-width: 640px) {
+  .container {
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    box-shadow: none;
+  }
+  .panel {
+    padding: 1rem 0.3rem;
+  }
+  .card {
+    padding: 0.8rem 0.5rem;
+  }
+}
